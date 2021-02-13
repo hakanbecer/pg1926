@@ -1,0 +1,28 @@
+def dogrula(eposta="giriniz",uzantisayisi="girniz"):
+    nokta=eposta.count(".")
+    at=eposta.count("@")
+    if nokta != uzantisayisi or at !=1:
+        print("e posta adresi yanlış")
+    elif nokta ==uzantisayisi:
+        bol=eposta.split("@")
+        kullaniciAdi=bol[0]
+        domain=bol[1]
+        if kullaniciAdi.isalnum() == True:
+            tr_harfler = "şçöğüİı"
+
+            for karakter in kullaniciAdi:
+                if karakter in tr_harfler:
+                    print("parolada Türkçe karakter kullanılamaz")
+                    break
+                else :
+                     print("e posta adresi doğru")
+                     break
+
+
+
+        else:
+            print("e posta adresi yanlış")
+
+
+
+dogrula(input("Geçerli Gir: "),int(input("Uzanti Gir: ")))
