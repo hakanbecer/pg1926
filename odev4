@@ -1,0 +1,27 @@
+
+listeal = []
+tekliste =[]
+sonsayi= []
+n = int(input("kaç tane sayı gireceksiniz : "))
+
+
+for i in range(0, n):
+    ele = int(input())
+    listeal.append(ele)
+
+print(listeal)
+
+list1 = listeal
+i = 0
+
+
+while (i < len(list1)):
+
+
+    if list1[i] % 2 != 0:
+        tekliste.append(list1[i])
+        tekliste.sort(reverse=True)
+
+
+    i += 1
+print("En Büyük Tek Sayı=", + tekliste[0])
