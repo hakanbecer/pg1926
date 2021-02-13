@@ -1,0 +1,22 @@
+def sayilar (a):
+    digersayilar = []
+    sifirlar = []
+    for i in a:
+        if i== 0:
+            sifirlar.append(i)
+        else:
+            digersayilar.append(i)
+    sonliste = sifirlar + digersayilar
+    return (sonliste)
+
+listeal = []
+n = int(input("kaç tane sayı gireceksiniz : "))
+
+
+for i in range(0, n):
+    ele = int(input())
+    listeal.append(ele)
+
+print(listeal)
+a= sayilar(listeal)
+print(a)
