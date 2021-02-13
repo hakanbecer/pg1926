@@ -1,0 +1,22 @@
+ <?php
+    
+    $time = date("H");
+    
+    $timezone = date("e");
+    
+    if ($time < "12") {
+        echo "Günaydın!!";
+    } else
+    
+    if ($time >= "12" && $time < "17") {
+        echo "Tünaydın!!";
+    } else
+    
+    if ($time >= "17" && $time < "19") {
+        echo "İyi Akşamlar !!";
+    } else
+    
+    if ($time >= "19") {
+        echo "İyi Geceler !!";
+    }
+    ?>
