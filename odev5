@@ -1,0 +1,25 @@
+class Okul:
+    __doc__='Okul Durumu'
+
+    def __init__(self, adi, turu, sinifSayisi, ogretmenSayisi, ):
+        self.adi=adi
+        self.turu=turu
+        self.sinifSayisi=sinifSayisi
+        self.ogretmenSayisi=ogretmenSayisi
+
+    def okulOzellikleri(self):
+        print ('{}  {} turu {} sinifli {} ogretmenli'.format(self.adi, self.turu, self.sinifSayisi, self.ogretmenSayisi))
+
+
+okulum=Okul ('Mahallem', 'Ortaokul', '6', '9')
+okulum.okulOzellikleri()
+
+
+class AnaSinifi(Okul):
+       def anasinifiVar(self):
+        print (self.adi, 'Ana Sınıfı Bulunur')
+
+
+okulsinif=AnaSinifi('Çocuklar','İlkokul','10','7')
+okulsinif.anasinifiVar()
+okulsinif.okulOzellikleri()
